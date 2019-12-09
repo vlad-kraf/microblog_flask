@@ -80,3 +80,5 @@ sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed
 2019-12-08 19:46:01,920 INFO: Microblog startup [in /home/solar/PycharmProjects/microblog_flask/app/__init__.py:45]
 2019-12-08 20:37:22,847 INFO: Microblog startup [in /home/solar/PycharmProjects/microblog_flask/app/__init__.py:45]
 2019-12-08 20:59:31,700 INFO: Microblog startup [in /home/solar/PycharmProjects/microblog_flask/app/__init__.py:45]
+2019-12-09 22:38:30,978 INFO: Microblog startup [in /home/solar/PycharmProjects/microblog_flask/app/__init__.py:45]
+2019-12-09 22:47:27,335 INFO: Microblog startup [in /home/solar/PycharmProjects/microblog_flask/app/__init__.py:45]
