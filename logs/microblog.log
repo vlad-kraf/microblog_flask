@@ -39,3 +39,4 @@ Traceback (most recent call last):
     prev_url = url_for('explore', page=page.prev_num) \
 AttributeError: 'int' object has no attribute 'prev_num'
 2019-12-11 23:10:17,897 INFO: Microblog startup [in /home/solar/PycharmProjects/microblog_flask/app/__init__.py:45]
+2019-12-13 21:34:48,194 INFO: Microblog startup [in /home/solar/PycharmProjects/microblog_flask/app/__init__.py:45]
