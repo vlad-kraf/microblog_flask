@@ -22,7 +22,7 @@ class Config(object):
     MAIL_PORT = '587'
     MAIL_USE_TLS = 1
     MAIL_USERNAME = 'example@gmail.com'
-    MAIL_PASSWORD = 'exaple_pass'
+    MAIL_PASSWORD = 'example_password'
     ADMINS = ['example@gmail.com']
 
 
