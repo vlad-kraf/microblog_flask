@@ -8,6 +8,7 @@ class Config(object):
         'sqlite:///' + os.path.join(basedir, 'app.db')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     POSTS_PER_PAGE = 25
+    LANGUAGES = ['en', 'ru']
 
 #    mail_server
 #    MAIL_SERVER = os.environ.get('MAIL_SERVER')
@@ -24,6 +25,3 @@ class Config(object):
     MAIL_USERNAME = 'example@gmail.com'
     MAIL_PASSWORD = 'example_password'
     ADMINS = ['example@gmail.com']
-
-
-

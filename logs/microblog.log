@@ -53,3 +53,14 @@ Traceback (most recent call last):
     raise SMTPServerDisconnected('please run connect() first')
 smtplib.SMTPServerDisconnected: please run connect() first
 2019-12-14 21:50:12,660 INFO: Microblog startup [in /home/solar/PycharmProjects/microblog_flask/app/__init__.py:47]
+2019-12-15 15:49:53,290 INFO: Microblog startup [in /home/solar/PycharmProjects/microblog_flask/app/__init__.py:47]
+2019-12-15 15:53:55,780 INFO: Microblog startup [in /home/solar/PycharmProjects/microblog_flask/app/__init__.py:47]
+2019-12-15 19:21:26,369 INFO: Microblog startup [in /home/solar/PycharmProjects/microblog_flask/app/__init__.py:50]
+2019-12-15 19:26:54,448 INFO: Microblog startup [in /home/solar/PycharmProjects/microblog_flask/app/__init__.py:50]
+2019-12-15 19:34:07,994 INFO: Microblog startup [in /home/solar/PycharmProjects/microblog_flask/app/__init__.py:50]
+2019-12-15 19:45:03,724 INFO: Microblog startup [in /home/solar/PycharmProjects/microblog_flask/app/__init__.py:50]
+2019-12-15 20:25:53,301 INFO: Microblog startup [in /home/solar/PycharmProjects/microblog_flask/app/__init__.py:49]
+2019-12-16 22:11:18,525 INFO: Microblog startup [in /home/solar/PycharmProjects/microblog_flask/app/__init__.py:51]
+2019-12-25 18:38:00,839 INFO: Microblog startup [in /home/solar/PycharmProjects/microblog_flask/app/__init__.py:53]
+2019-12-25 21:04:56,898 INFO: Microblog startup [in /home/solar/PycharmProjects/microblog_flask/app/__init__.py:54]
+2019-12-25 21:12:58,252 INFO: Microblog startup [in /home/solar/PycharmProjects/microblog_flask/app/__init__.py:54]
