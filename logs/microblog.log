@@ -1,22 +1,38 @@
-2019-12-14 21:37:44,370 ERROR: Exception on /reset_password_request [POST] [in /home/solar/PycharmProjects/microblog_flask/venv/lib/python3.8/site-packages/flask/app.py:1890]
+2020-01-04 22:07:03,931 ERROR: Exception on /translate [POST] [in /home/solar/PycharmProjects/microblog_flask/venv/lib/python3.8/site-packages/flask/app.py:1890]
 Traceback (most recent call last):
-  File "/home/solar/PycharmProjects/microblog_flask/venv/lib/python3.8/site-packages/flask_mail.py", line 492, in send
-    message.send(connection)
-  File "/home/solar/PycharmProjects/microblog_flask/venv/lib/python3.8/site-packages/flask_mail.py", line 427, in send
-    connection.send(self)
-  File "/home/solar/PycharmProjects/microblog_flask/venv/lib/python3.8/site-packages/flask_mail.py", line 188, in send
-    self.host.sendmail(sanitize_address(envelope_from or message.sender),
-  File "/usr/lib/python3.8/smtplib.py", line 856, in sendmail
-    self.ehlo_or_helo_if_needed()
-  File "/usr/lib/python3.8/smtplib.py", line 604, in ehlo_or_helo_if_needed
-    if not (200 <= self.ehlo()[0] <= 299):
-  File "/usr/lib/python3.8/smtplib.py", line 444, in ehlo
-    self.putcmd(self.ehlo_msg, name or self.local_hostname)
-  File "/usr/lib/python3.8/smtplib.py", line 371, in putcmd
-    self.send(str)
-  File "/usr/lib/python3.8/smtplib.py", line 363, in send
-    raise SMTPServerDisconnected('please run connect() first')
-smtplib.SMTPServerDisconnected: please run connect() first
+  File "/home/solar/PycharmProjects/microblog_flask/venv/lib/python3.8/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/solar/PycharmProjects/microblog_flask/venv/lib/python3.8/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/solar/PycharmProjects/microblog_flask/venv/lib/python3.8/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/solar/PycharmProjects/microblog_flask/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/solar/PycharmProjects/microblog_flask/venv/lib/python3.8/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/solar/PycharmProjects/microblog_flask/venv/lib/python3.8/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/solar/PycharmProjects/microblog_flask/venv/lib/python3.8/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/solar/PycharmProjects/microblog_flask/app/routes.py", line 199, in translate_text
+    return jsonify({'text': translate(request.form['text'],
+  File "/home/solar/PycharmProjects/microblog_flask/app/translate.py", line 17, in translate
+    translation = translate_client.translate(
+  File "/home/solar/PycharmProjects/microblog_flask/venv/lib/python3.8/site-packages/google/cloud/translate_v2/client.py", line 268, in translate
+    response = self._connection.api_request(method="POST", path="", data=data)
+  File "/home/solar/PycharmProjects/microblog_flask/venv/lib/python3.8/site-packages/google/cloud/_http.py", line 421, in api_request
+    raise exceptions.from_http_response(response)
+google.api_core.exceptions.BadRequest: 400 POST https://translation.googleapis.com/language/translate/v2: Invalid Value
+2020-01-04 22:08:51,125 INFO: Microblog startup [in /home/solar/PycharmProjects/microblog_flask/app/__init__.py:54]
+2020-01-04 22:08:55,256 ERROR: Exception on /translate [POST] [in /home/solar/PycharmProjects/microblog_flask/venv/lib/python3.8/site-packages/flask/app.py:1890]
+Traceback (most recent call last):
+  File "/home/solar/PycharmProjects/microblog_flask/app/translate.py", line 17, in translate
+    translation = translate_client.translate(
+  File "/home/solar/PycharmProjects/microblog_flask/venv/lib/python3.8/site-packages/google/cloud/translate_v2/client.py", line 268, in translate
+    response = self._connection.api_request(method="POST", path="", data=data)
+  File "/home/solar/PycharmProjects/microblog_flask/venv/lib/python3.8/site-packages/google/cloud/_http.py", line 421, in api_request
+    raise exceptions.from_http_response(response)
+google.api_core.exceptions.BadRequest: 400 POST https://translation.googleapis.com/language/translate/v2: Invalid Value
 
 During handling of the above exception, another exception occurred:
 
@@ -33,34 +49,21 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/home/solar/PycharmProjects/microblog_flask/venv/lib/python3.8/site-packages/flask/app.py", line 1935, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/solar/PycharmProjects/microblog_flask/app/routes.py", line 167, in reset_password_request
-    send_password_reset_email(user)
-  File "/home/solar/PycharmProjects/microblog_flask/app/email.py", line 14, in send_password_reset_email
-    send_email('[Microblog] Reset Your Password',
-  File "/home/solar/PycharmProjects/microblog_flask/app/email.py", line 10, in send_email
-    mail.send(msg)
-  File "/home/solar/PycharmProjects/microblog_flask/venv/lib/python3.8/site-packages/flask_mail.py", line 492, in send
-    message.send(connection)
-  File "/home/solar/PycharmProjects/microblog_flask/venv/lib/python3.8/site-packages/flask_mail.py", line 152, in __exit__
-    self.host.quit()
-  File "/usr/lib/python3.8/smtplib.py", line 988, in quit
-    res = self.docmd("quit")
-  File "/usr/lib/python3.8/smtplib.py", line 424, in docmd
-    self.putcmd(cmd, args)
-  File "/usr/lib/python3.8/smtplib.py", line 371, in putcmd
-    self.send(str)
-  File "/usr/lib/python3.8/smtplib.py", line 363, in send
-    raise SMTPServerDisconnected('please run connect() first')
-smtplib.SMTPServerDisconnected: please run connect() first
-2019-12-14 21:50:12,660 INFO: Microblog startup [in /home/solar/PycharmProjects/microblog_flask/app/__init__.py:47]
-2019-12-15 15:49:53,290 INFO: Microblog startup [in /home/solar/PycharmProjects/microblog_flask/app/__init__.py:47]
-2019-12-15 15:53:55,780 INFO: Microblog startup [in /home/solar/PycharmProjects/microblog_flask/app/__init__.py:47]
-2019-12-15 19:21:26,369 INFO: Microblog startup [in /home/solar/PycharmProjects/microblog_flask/app/__init__.py:50]
-2019-12-15 19:26:54,448 INFO: Microblog startup [in /home/solar/PycharmProjects/microblog_flask/app/__init__.py:50]
-2019-12-15 19:34:07,994 INFO: Microblog startup [in /home/solar/PycharmProjects/microblog_flask/app/__init__.py:50]
-2019-12-15 19:45:03,724 INFO: Microblog startup [in /home/solar/PycharmProjects/microblog_flask/app/__init__.py:50]
-2019-12-15 20:25:53,301 INFO: Microblog startup [in /home/solar/PycharmProjects/microblog_flask/app/__init__.py:49]
-2019-12-16 22:11:18,525 INFO: Microblog startup [in /home/solar/PycharmProjects/microblog_flask/app/__init__.py:51]
-2019-12-25 18:38:00,839 INFO: Microblog startup [in /home/solar/PycharmProjects/microblog_flask/app/__init__.py:53]
-2019-12-25 21:04:56,898 INFO: Microblog startup [in /home/solar/PycharmProjects/microblog_flask/app/__init__.py:54]
-2019-12-25 21:12:58,252 INFO: Microblog startup [in /home/solar/PycharmProjects/microblog_flask/app/__init__.py:54]
+  File "/home/solar/PycharmProjects/microblog_flask/venv/lib/python3.8/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/solar/PycharmProjects/microblog_flask/app/routes.py", line 199, in translate_text
+    return jsonify({'text': translate(request.form['text'],
+  File "/home/solar/PycharmProjects/microblog_flask/app/translate.py", line 21, in translate
+    return _(text, target_language, 'Error: the translation service failed.')
+TypeError: gettext() takes 1 positional argument but 3 were given
+2020-01-04 22:15:35,026 INFO: Microblog startup [in /home/solar/PycharmProjects/microblog_flask/app/__init__.py:54]
+2020-01-04 22:16:39,541 INFO: Microblog startup [in /home/solar/PycharmProjects/microblog_flask/app/__init__.py:54]
+2020-01-04 22:18:00,979 INFO: Microblog startup [in /home/solar/PycharmProjects/microblog_flask/app/__init__.py:54]
+2020-01-04 22:24:17,764 INFO: Microblog startup [in /home/solar/PycharmProjects/microblog_flask/app/__init__.py:54]
+2020-01-04 22:25:47,266 INFO: Microblog startup [in /home/solar/PycharmProjects/microblog_flask/app/__init__.py:54]
+2020-01-04 22:35:07,719 INFO: Microblog startup [in /home/solar/PycharmProjects/microblog_flask/app/__init__.py:54]
+2020-01-04 22:36:03,420 INFO: Microblog startup [in /home/solar/PycharmProjects/microblog_flask/app/__init__.py:54]
+2020-01-04 22:37:16,143 INFO: Microblog startup [in /home/solar/PycharmProjects/microblog_flask/app/__init__.py:54]
+2020-01-04 22:42:35,781 INFO: Microblog startup [in /home/solar/PycharmProjects/microblog_flask/app/__init__.py:54]
+2020-01-04 22:45:17,598 INFO: Microblog startup [in /home/solar/PycharmProjects/microblog_flask/app/__init__.py:54]
+2020-01-04 22:48:36,414 INFO: Microblog startup [in /home/solar/PycharmProjects/microblog_flask/app/__init__.py:54]
