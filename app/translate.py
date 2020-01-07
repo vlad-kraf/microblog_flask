@@ -16,7 +16,7 @@ def translate(text, target_language):
         translation = translate_client.translate(
             text,
             target_language=target_language)
-    except:
+    except Exception:
         return (text, target_language, 'Error: the translation service failed.')
 
     return str(translation['translatedText'])

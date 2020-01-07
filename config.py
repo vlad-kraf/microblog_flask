@@ -12,6 +12,8 @@ class Config(object):
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     POSTS_PER_PAGE = 25
     LANGUAGES = ['en', 'ru']
+    ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL')
+
 #   Google translate API credentials
     GOOGLE_APPLICATION_CREDENTIALS = os.environ.get(
         'GOOGLE_APPLICATION_CREDENTIALS')
