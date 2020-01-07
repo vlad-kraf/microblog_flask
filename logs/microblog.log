@@ -75,3 +75,4 @@ werkzeug.routing.BuildError: Could not build url for endpoint 'main.logout'. Did
 2020-01-07 14:55:57,529 INFO: Microblog startup [in /home/solar/PycharmProjects/microblog_flask/app/__init__.py:79]
 2020-01-07 14:57:52,439 INFO: Microblog startup [in /home/solar/PycharmProjects/microblog_flask/app/__init__.py:79]
 2020-01-07 14:58:02,739 INFO: Microblog startup [in /home/solar/PycharmProjects/microblog_flask/app/__init__.py:79]
+2020-01-07 16:12:46,773 INFO: Microblog startup [in /home/solar/PycharmProjects/microblog_flask/app/__init__.py:79]
