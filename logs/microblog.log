@@ -43,3 +43,4 @@ Traceback (most recent call last):
   File "/home/solar/PycharmProjects/microblog_flask/venv/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 708, in comparator
     raise TypeError(
 TypeError: Object None associated with '.type' attribute is not a TypeEngine class or object
+2020-01-20 14:47:51,919 INFO: Microblog startup [in /Users/mariiabocheva/PycharmProjects/microblog_flask/app/__init__.py:79]

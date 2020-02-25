@@ -6,3 +6,4 @@ gen
 venv/
 /logs/
 /.env
+__pycache__/
